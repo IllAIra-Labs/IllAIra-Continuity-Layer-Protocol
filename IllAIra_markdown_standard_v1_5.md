@@ -656,7 +656,7 @@ interface ParsedIllAIraFile {
 interface IllAIraBlock {
   type: 'module' | 'sub_module' | 'section' | 'rule' | 'log'
       | 'attention_anchor' | 'quote' | 'list' | 'paragraph'
-      | 'permission_block' | 'separator' | [hidden due to patent] | 'state_registry';
+      | 'permission_block' | 'separator' | 'state_registry'; // Note: Additional block types are reserved for proprietary engine extensions
 
   id?: string;                    // for modules: '042', 'CORE_001'
   name?: string;                  // for modules/sub-modules: human name
