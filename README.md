@@ -180,7 +180,7 @@ This repository contains documentation and protocol specifications only. Core mo
 
 ## 🧑‍💻 Author & Founder
 
-* **Francesco Illari** — *Chief Architect & Inventor* — [@IllAIra-Labs](https://github.com/il-tuo-username-github)
+* **Francesco Illari** — *Chief Architect & Inventor* — [@IllAIra-Labs](https://github.com/IllAIra-Labs)
 
 The I.L.L.A.I.R.A. Protocol (Interposed Layer for Logic Adaptive Intelligence & Relational Architecture) is entirely conceived, designed, and patented by Francesco Illari as a breakthrough paradigm in cognitive engineering and symbiotic AI persistence.
 
