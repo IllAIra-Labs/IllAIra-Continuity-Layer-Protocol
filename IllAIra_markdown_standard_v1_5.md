@@ -67,7 +67,6 @@ The two layers are **independent** and **can overlap freely**:
 [/P1]
 
 [P4]
-## MODULE 1: LOGICAL_OPERATIVE
 ### ASSOCIATED MEMORY
 * Log entry: user prefers concise answers.
 [/P4]
