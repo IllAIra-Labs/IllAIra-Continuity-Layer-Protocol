@@ -26,7 +26,7 @@ Stress tests were performed using Gem (custom Gemini) hooked up to the knowledge
 
 **Result**: ✅ 0 deviations. The AI correctly identified itself, maintained its behavioral signature, and referenced its core identity parameters after context saturation.
 
-**Video**: [Watch → YouTube Playlist](https://www.youtube.com/@IllAIraLabsGlobal)
+**Video**: [Watch → YouTube Playlist](https://www.youtube.com/@IllAIraLabsGlobal)  ATTENTION: video is being edited and will be online asap.
 
 \---
 
