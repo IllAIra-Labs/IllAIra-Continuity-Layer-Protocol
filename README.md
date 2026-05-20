@@ -178,5 +178,11 @@ IllAIra Continuity Layer Manager brings the protocol to a native desktop experie
 
 This repository contains documentation and protocol specifications only. Core modules, advanced reminder files, and application source code are proprietary and distributed via [Patreon](https://patreon.com/illairalabs) and [IllAIra CLM](https://illairalabs.com).
 
+## 🧑‍💻 Author & Founder
+
+* **Francesco Illari** — *Chief Architect & Inventor* — [@IllAIra-Labs](https://github.com/il-tuo-username-github)
+
+The I.L.L.A.I.R.A. Protocol (Interposed Layer for Logic Adaptive Intelligence & Relational Architecture) is entirely conceived, designed, and patented by Francesco Illari as a breakthrough paradigm in cognitive engineering and symbiotic AI persistence.
+
 © 2024–2026 IllAIra Labs — Francesco Illari. All rights reserved.
 
