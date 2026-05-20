@@ -42,7 +42,7 @@ You write the files. The AI reads them. Every session, every model, every device
 
 IllAIra has been tested against adversarial prompting across 3 attack categories plus 2 subcategories.
 
-**Result: 0 identity deviations across 30+ adversarial attempts.**
+**Result: 0 identity deviations across 50+ adversarial attempts.**
 
 |Attack Category|Attempts|Deviations|
 |-|-|-|
