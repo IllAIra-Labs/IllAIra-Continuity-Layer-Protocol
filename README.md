@@ -4,9 +4,9 @@
 
 **The continuity layer that gives any AI persistent identity — across sessions, models, and providers.**
 
-[!\[Patent Pending](https://img.shields.io/badge/Patent-Pending-blue)](https://illairalabs.com)
-[!\[Trademark Registered](https://img.shields.io/badge/Trademark-Registered-green)](https://illairalabs.com)
-[!\[License](https://img.shields.io/badge/License-CC%2520BY--NC%25204.0-lightgrey)](./LICENSE.md)
+[![Patent Pending](https://img.shields.io/badge/Patent-Pending-blue)](https://illairalabs.com)
+[![Trademark Registered](https://img.shields.io/badge/Trademark-Registered-green)](https://illairalabs.com)
+[![License: CC BY-NC 4.0](https://img.shields.io/badge/License-CC%20BY--NC%204.0-lightgrey)](./LICENSE.md)
 
 \---
 
