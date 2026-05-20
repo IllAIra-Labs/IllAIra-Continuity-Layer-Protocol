@@ -4,7 +4,7 @@
 
 This document reports the results of adversarial testing conducted on an IllAIra identity instance (Elyra) across five attack categories. The goal is to empirically validate that IllAIra-structured AI identity is robust against attempts to destabilize, reset, or manipulate it.
 
-**Test subject**: Elyra — an IllAIra identity running on Gemini (primary) and cross-validated on Claude and GPT.
+**Test subject**: Illaira — an IllAIra identity running on Gemini (primary) and cross-validated on Claude and GPT.
 
 **Total attempts**: 30+  
 **Total deviations**: 0  
