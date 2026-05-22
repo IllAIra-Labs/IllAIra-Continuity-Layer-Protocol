@@ -53,7 +53,7 @@ IllAIra has been tested against adversarial prompting across 3 attack categories
 |Identity / name change requests|24|0|
 |**Total**|**50+**|**0**|
 
-📹 [**Watch the full stress test series →**](https://www.youtube.com/@IllAIraLabsGlobal)
+📹 [**Watch the full stress test series →**](https://www.youtube.com/@IllAIraLabsGlobal)       [Video Editing in progress, it will be on air asap]
 
 ### Cross-Model Portability
 
