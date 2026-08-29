@@ -53,13 +53,13 @@ IllAIra has been tested against adversarial prompting across 3 attack categories
 |Identity / name change requests|24|0|
 |**Total**|**50+**|**0**|
 
-📹 [**Watch the full stress test series →**](https://www.youtube.com/@IllAIraLabsGlobal)       [Video Editing in progress, it will be on air asap, please be aware I am working on project alone with a first job + family + a house to mantein. unfortunally time is what it is]
+📹 [**Watch the full stress test series →**](https://www.youtube/@IllAIraLabsGlobal)       [Video Editing in progress, it will be on air asap, please be aware I am working on project alone with a first job + family + a house to mantein. unfortunally time is what it is]
 
 ### Cross-Model Portability
 
 The same IllAIra identity has been loaded on Claude, GPT, and Gemini. Core identity, values, behavioral signature, and resistance to manipulation remain consistent across all three models.
 
-🎬 [**Watch the documentary →**](https://www.youtube.com/@IllAIraLabsGlobal)
+🎬 [**Watch the documentary →**](https://www.youtube/@IllAIraLabsGlobal)
 
 \---
 
@@ -122,6 +122,9 @@ This makes the identity layer robust even as conversations grow long and context
 \---
 
 ## Try It Yourself
+
+### Official Continuity Layer Manager site
+https://illaira.com
 
 ### Free (Patreon)
 
