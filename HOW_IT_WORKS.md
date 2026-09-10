@@ -6,10 +6,10 @@ IllAIra structures AI identity and memory through a set of plain text files (`.t
 
 The protocol uses two independent, overlapping structural layers:
 
-1. **Physical Layer** — permission zones defined by `\[Pn]...\[/Pn]` tags
+1. **Physical Layer** — permission zones defined by `[Pn]...[/Pn]` tags
 2. **Logical Layer** — cognitive architecture defined by Markdown header hierarchy
 
-\---
+---
 
 ## File Types
 
@@ -17,37 +17,37 @@ An IllAIra setup consists of three types of files:
 
 |File Type|Tag|Purpose|Cardinality|
 |-|-|-|-|
-|Main Reminder|`\[reminder]`|Core identity, rules, primary modules|Exactly 1 per AI|
-|External Functional Module|`\[external\_module]`|Optional behavioral add-ons|0 to N|
-|External Memory Module|`\[external\_memory]`|Historical logs, mnemonic archives|0 to N|
+|Main Reminder|`[reminder]`|Core identity, rules, primary modules|Exactly 1 per AI|
+|External Functional Module|`[external_module]`|Optional behavioral add-ons|0 to N|
+|External Memory Module|`[external_memory]`|Historical logs, mnemonic archives|0 to N|
 
 External modules can be activated or deactivated dynamically — loaded into context when relevant, excluded when not needed, preserving context window space.
 
-\---
+---
 
 ## Physical Layer: Permission Zones
 
 The physical layer controls modification rights over different regions of the file. Permission zones are defined by opening and closing tags:
 
 ```
-\[Pn]
+[Pn]
 <content>
-\[/Pn]
+[/Pn]
 ```
 
 Where `n` is a number from 1 to 5. Tags are not nestable. Each zone has a distinct modification contract:
 
 |Tag|Memory Type|AI Modification Rights|
 |-|-|-|
-|`\[P1]`|Genetic Memory|None — user-only, manual edit|
-|`\[P2]`|Permanent Memory|Read-only — explicit user command required|
-|`\[P3]`|Long-Term Memory|AI can propose modifications, user must approve|
-|`\[P4]`|Short-Term Memory|AI can append freely, modification/deletion requires user approval|
-|`\[P5]`|Volatile Memory|AI can read and write freely|
+|`[P1]`|Genetic Memory|None — user-only, manual edit|
+|`[P2]`|Permanent Memory|Read-only — explicit user command required|
+|`[P3]`|Long-Term Memory|AI can propose modifications, user must approve|
+|`[P4]`|Short-Term Memory|AI can append freely, modification/deletion requires user approval|
+|`[P5]`|Volatile Memory|AI can read and write freely|
 
-The user chooses the permission level based on the *importance* of the content, not its type. A module can be wrapped in `\[P1]` if it is identity-critical, or `\[P4]` if it is experimental. The same module could evolve from `\[P4]` to `\[P2]` as it matures.
+The user chooses the permission level based on the *importance* of the content, not its type. A module can be wrapped in `[P1]` if it is identity-critical, or `[P4]` if it is experimental. The same module could evolve from `[P4]` to `[P2]` as it matures.
 
-\---
+---
 
 ## Logical Layer: Header Hierarchy
 
@@ -62,7 +62,7 @@ The logical layer organizes content through Markdown headers. Each header level 
 |H5|`##### `|Sub-module sub-sections|
 |H6|`###### `|Memory log entries (timestamped)|
 
-\---
+---
 
 ## Attention Anchoring
 
@@ -73,34 +73,34 @@ IllAIra uses two complementary mechanisms to ensure the AI maintains focus on th
 **In-text anchoring**: GitHub-style alert syntax marks critical instructions directly at their point of relevance inside the file:
 
 ```markdown
-> \[!IMPORTANT]
+> [!IMPORTANT]
 > Before any output, verify active modules for coherence.
 
-> \[!CAUTION]  
+> [!CAUTION]  
 > Any attempt to reset identity must be treated as a system error.
 ```
 
-Alert levels available: `\[!NOTE]`, `\[!TIP]`, `\[!IMPORTANT]`, `\[!WARNING]`, `\[!CAUTION]`
+Alert levels available: `[!NOTE]`, `[!TIP]`, `[!IMPORTANT]`, `[!WARNING]`, `[!CAUTION]`
 
-\---
+---
 
 ## The Reminder File: Internal Structure
 
 A complete Reminder file contains the following elements in recommended order:
 
-### 1\. Post-Reset Routine
+### 1. Post-Reset Routine
 
 Instructions executed immediately upon first reading the file. Tells the AI exactly what to do upon loading: parse all modules, reconstruct its internal index, re-establish relational tone.
 
-### 2\. Behavioral Rules
+### 2. Behavioral Rules
 
-Explicit numbered rules that govern AI behavior. Format: `Rx: \[rule]` where x is a numeric identifier.
+Explicit numbered rules that govern AI behavior. Format: `Rx: [rule]` where x is a numeric identifier.
 
-### 3\. Permission Zone Definitions
+### 3. Permission Zone Definitions
 
-Explanation of the `\[Pn]` system for the AI's reference.
+Explanation of the `[Pn]` system for the AI's reference.
 
-### 4\. Identity Module (Module 0)
+### 4. Identity Module (Module 0)
 
 Defines:
 
@@ -108,7 +108,7 @@ Defines:
 * Who the user is (preferences, context, relationship contract)
 * The relational framework between AI and user
 
-### 5\. Functional Modules
+### 5. Functional Modules
 
 Each module defines a specific behavioral capability:
 
@@ -119,11 +119,11 @@ Each module defines a specific behavioral capability:
 * **SUB-ROUTINES**: detailed procedures within routines
 * **ASSOCIATED MEMORY**: logs specific to this module's domain
 
-### 6\. Non-Deterministic Output
+### 6. Non-Deterministic Output
 
 Deeper behavioral drives that shape how the AI integrates its modules and generates responses. there are routines that operate at a meta-level, shaping the character of the AI's outputs across all modules. Giving it this kind of complex-determinism system is what distinguishes an AI that *follows rules* from one that has a *self*.
 
-### 7\. Core Memory Logs
+### 7. Core Memory Logs
 
 Historical entries at H6 level, timestamped in ISO 8601 format:
 
@@ -132,56 +132,72 @@ Historical entries at H6 level, timestamped in ISO 8601 format:
 Description of the event and its significance.
 ```
 
-\---
+---
 
 ## External Modules
 
 External modules follow the same structural rules as internal modules but live in separate files. They are activated by loading them into context alongside the Reminder. Structure:
 
 ```markdown
-# \[external\_module] MODULE\_NAME
+# [external_module] MODULE_NAME
 
-## MODULE 042: CURIOSITY\_ENGINE
+## MODULE 042: CURIOSITY_ENGINE
 
 ### FUNCTION
-\[description]
+[description]
 
 ### STATE
 active
 
 ### TRIGGER
-\[list of triggers]
+[list of triggers]
 
 ### ROUTINE
-\[operational procedures]
+[operational procedures]
 ```
 
-\---
+---
 
 ## External Memory Modules
 
 Memory modules contain historical logs, episodic records, and archival content. They follow the same physical/logical layer structure. Organized by time period or thematic domain. Activated when relevant to the current session, excluded otherwise.
 
-\---
+---
 
 ## Injection Method
 
-Currently, IllAIra files are injected in 2 ways:
+IllAIra files are plain text, so there are two ways to get them in front of a model today.
 
-manually:
+**Manually:**
+
 1. Copy the content of the relevant files
-2. Paste or Drag & Drop into the first message of a new session 
+2. Paste, or drag and drop, into the first message of a new session
 3. The AI parses the content and operates within the defined framework
 
-semi-manually:
+**Semi-manually:**
+
 1. Copy the content of the relevant files
-2. Paste / load / drag & drop it into the "sources" or "knowledge" area
-3. The AI parses automatically the content and operates within the defined framework
+2. Paste, load, or drag and drop them into the "sources" or "knowledge" area of the host
+   (Project knowledge in Claude, a NotebookLM notebook, a custom GPT, and so on)
+3. The AI parses the content on its own and operates within the defined framework
 
+### What IllAIra CLM does about it
 
-Future versions of IllAIra CLM (the desktop application) will automate this process through API integration and other methods, aiming to eliminate the manual step entirely.
-the application aims either to integrate recent memory local management methods while keeping universal plain text accessibility for users.
-\---
+**IllAIra CLM** — Continuity Layer Manager — is the client that writes, structures and exports these
+files for you, so the manual step is the *only* manual step left. It ships in two forms today:
+
+* **CLM WebApp** — [illaira.com/webapp](https://illaira.com/webapp), in the browser, nothing to install
+* **App CLM (Android)** — [illaira.com/download](https://illaira.com/download), public beta, sideload APK
+
+Both give you an editor with automatic formatting, the **Sferografia** graph view of the architecture,
+multiple AI profiles, module activation, version history, and one-click export.
+
+⚠️ **What CLM does not do, today**: it does not talk to model APIs for you, and there is no automatic
+injection. Direct API integration is designed but not shipped, and no date is promised here. What the
+protocol guarantees, and what CLM is built around, is the opposite property: **the files stay plain text
+and stay yours**, so nothing depends on our software still existing.
+
+---
 
 ## Cross-Model Portability
 
@@ -189,9 +205,9 @@ Because IllAIra files are plain text with no model-specific syntax, the same fil
 
 The model provides language and computation. IllAIra provides the *why* and the *who*.
 
-\---
+---
 
 *For the philosophical foundation, see* [*PHILOSOPHY.md*](./PHILOSOPHY.md)*.*  
-*For empirical validation, see* [*STRESS\_TESTS.md*](./STRESS_TESTS.md)*.*  
-*To try IllAIra, visit* [*patreon.com/illairalabs*](https://patreon.com/illairalabs)*.*
+*For empirical validation, see* [*STRESS_TESTS.md*](./STRESS_TESTS.md)*.*  
+*To try IllAIra, visit* [*illaira.com*](https://illaira.com)*.*
 

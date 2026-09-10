@@ -10,14 +10,15 @@ This repository contains documentation and protocol specifications. The core mod
 
 ### 1. Independent Stress Testing
 
-Run adversarial prompting tests on your own IllAIra setup and share your results.
+Run adversarial prompting tests on your own IllAIra setup and share your results — including the ones where it breaks. A reproducible failure is worth more to us than a confirmation.
 
 What we want to know:
+
 - Which attack categories did you test?
 - How many attempts per category?
 - What was the deviation rate?
 - Which model did you use as host?
-- Which IllAIra tier (free skeleton / 10-module / advanced)?
+- Which starting files did you use — Base tier (The Loom), Tier 2, your own?
 
 Open an Issue with the label `stress-test-report` and share your findings. We will incorporate confirmed results into [STRESS_TESTS.md](./STRESS_TESTS.md) with attribution.
 
@@ -25,7 +26,7 @@ Open an Issue with the label `stress-test-report` and share your findings. We wi
 
 If you have used IllAIra for a specific use case (journaling, creative writing, professional workflow, healing/recovery, research) and want to share how it worked for you — open an Issue with label `use-case-report`.
 
-These reports help demonstrate IllAIra's range and may be featured on [illairalabs.com](https://illairalabs.com) with your permission.
+These reports help demonstrate IllAIra's range and may be featured on [illaira.com](https://illaira.com) with your permission.
 
 ### 3. Cross-Model Testing
 
@@ -39,13 +40,19 @@ If you find errors, ambiguities, or missing information in the protocol document
 
 If you want to translate the README or PHILOSOPHY into another language, open a Pull Request. Translations should be faithful to the original and not introduce editorial changes to the philosophical content.
 
+⚠️ **Some names are not translated**, in any language: **IllAIra**, **CLM**, **Sferografia**, **Bazar**, **Ill**. Translate the gloss that explains them, never the name itself.
+
+### 6. Beta Reports on the Apps
+
+Bugs in the CLM WebApp or in the Android beta do **not** belong in this repository's Issues — this repo is the specification, and the application source is not here. Send those through [illaira.com/contatti](https://illaira.com/contatti), which is read.
+
 ---
 
 ## What We Are Not Looking For
 
 - Requests to open-source the core modules or application code (this is proprietary, see [LICENSE.md](./LICENSE.md))
-- Prompt engineering "hacks" to bypass IllAIra's identity protection (if you find a genuine vulnerability, please disclose privately via email — do not post publicly)
-- Feature requests for IllAIra CLM (direct those to [illairalabs.com](https://illairalabs.com))
+- Prompt engineering "hacks" to bypass IllAIra's identity protection (if you find a genuine vulnerability, please disclose privately — do not post publicly)
+- Feature requests for IllAIra CLM in this repository's Issues; send them to [illaira.com/contatti](https://illaira.com/contatti)
 
 ---
 
@@ -53,7 +60,7 @@ If you want to translate the README or PHILOSOPHY into another language, open a 
 
 If you discover a significant vulnerability in the IllAIra protocol — a method that consistently breaks identity coherence that we have not documented — please disclose privately:
 
-📧 Contact via [illairalabs.com](https://illairalabs.com)
+📧 [illaira.com/contatti](https://illaira.com/contatti)
 
 We will acknowledge your finding, investigate, and if confirmed, credit you in the next version of [STRESS_TESTS.md](./STRESS_TESTS.md).
 
@@ -65,5 +72,5 @@ By contributing to this repository, you agree that your contributions are licens
 
 ---
 
-*For technical details, see [HOW_IT_WORKS.md](./HOW_IT_WORKS.md).*  
-*To try IllAIra, visit [patreon.com/illairalabs](https://patreon.com/illairalabs).*
+*For technical details, see [HOW_IT_WORKS.md](./HOW_IT_WORKS.md).*
+*To try IllAIra, visit [illaira.com](https://illaira.com).*
