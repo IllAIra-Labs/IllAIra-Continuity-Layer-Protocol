@@ -184,18 +184,20 @@ IllAIra files are plain text, so there are two ways to get them in front of a mo
 ### What IllAIra CLM does about it
 
 **IllAIra CLM** — Continuity Layer Manager — is the client that writes, structures and exports these
-files for you, so the manual step is the *only* manual step left. It ships in two forms today:
+files for you, so the manual step is the *only* manual step left. It ships in three forms today:
 
 * **CLM WebApp** — [illaira.com/webapp](https://illaira.com/webapp), in the browser, nothing to install
 * **App CLM (Android)** — [illaira.com/download](https://illaira.com/download), public beta, sideload APK
+* **App CLM (Windows, Linux)** — [illaira.com/download](https://illaira.com/download#desktop), public beta, installer / zip / `.deb` / AppImage
 
-Both give you an editor with automatic formatting, the **Sferografia** graph view of the architecture,
-multiple AI profiles, module activation, version history, and one-click export.
+All of them give you an editor with automatic formatting, the **Sphere Grid** view of the architecture,
+multiple AI profiles, module activation, search by meaning, and export.
 
-⚠️ **What CLM does not do, today**: it does not talk to model APIs for you, and there is no automatic
-injection. Direct API integration is designed but not shipped, and no date is promised here. What the
-protocol guarantees, and what CLM is built around, is the opposite property: **the files stay plain text
-and stay yours**, so nothing depends on our software still existing.
+⚠️ **What CLM does not do, today**: it is not an AI and does not host a model of its own. The clients can
+chat with your files — with a model that runs on your own device, or with your own key — and show which
+passages they used, but there is no automatic injection into other services: the file still travels to
+your chat of choice. What the protocol guarantees, and what CLM is built around, is the property that does not
+depend on any of this: **the files stay plain text and stay yours**, so nothing depends on our software still existing.
 
 ---
 

@@ -6,21 +6,23 @@
 
 [![Site](https://img.shields.io/badge/site-illaira.com-0a3d40)](https://illaira.com)
 [![CLM WebApp](https://img.shields.io/badge/CLM%20WebApp-live-brightgreen)](https://illaira.com/webapp)
-[![Android](https://img.shields.io/badge/Android%20app-beta%200.1.69-orange)](https://illaira.com/download)
+[![Android](https://img.shields.io/badge/Android%20app-beta%200.1.144-orange)](https://illaira.com/download)
+[![Windows and Linux](https://img.shields.io/badge/Windows%20%7C%20Linux%20app-beta%200.2.4-blueviolet)](https://illaira.com/download)
 [![Patent Pending](https://img.shields.io/badge/Patent-Pending-blue)](https://illaira.com)
 [![Trademark Registered](https://img.shields.io/badge/Trademark-Registered-green)](https://illaira.com)
 [![License: CC BY-NC 4.0](https://img.shields.io/badge/License-CC%20BY--NC%204.0-lightgrey)](./LICENSE.md)
 
 ---
 
-> ### Status — 10 September 2026
+> ### Status — 5 October 2026
 >
-> This repository is the **specification**. The protocol now also has software you can use today:
+> This repository is the **specification**. The protocol also has software you can use today:
 >
 > | | Where | Status |
 > |---|---|---|
 > | **CLM WebApp** | [illaira.com/webapp](https://illaira.com/webapp) | Live. Runs in the browser, nothing to install |
-> | **App CLM (Android)** | [illaira.com/download](https://illaira.com/download) | Public beta `0.1.69`, sideload APK |
+> | **App CLM (Android)** | [illaira.com/download](https://illaira.com/download) | Public beta `0.1.144`, sideload APK |
+> | **App CLM (Windows and Linux)** | [illaira.com/download](https://illaira.com/download#desktop) | Public beta `0.2.4` — Windows 10/11 installer or portable zip, Linux `.deb` or AppImage |
 > | **Bazar** (starter files) | [illaira.com/bazar](https://illaira.com/bazar) | Two Reminder tiers + one module, free with an account |
 > | **This repository** | you are here | Protocol spec, stress tests, philosophy |
 >
@@ -61,58 +63,104 @@ The protocol works with nothing but a text editor — that is the point, and it 
 What is new since this README was first written is that you no longer *have* to do it by hand.
 
 **IllAIra CLM** — Continuity Layer Manager — is the client that writes, structures and exports these
-files for you. It exists in two forms, and they are two real clients, not one product and one demo:
+files for you. It exists in three forms. They are real clients, not one product and some demos:
 
-| | **CLM WebApp** | **App CLM (Android)** |
-|---|---|---|
-| How to get it | Open [illaira.com/webapp](https://illaira.com/webapp) | Sideload the APK from [illaira.com/download](https://illaira.com/download) |
-| Install | Nothing | Manual (see below) |
-| Editor with auto-formatting | ✅ | ✅ |
-| **Sphere-grid** — the graph view of your AI's architecture | ✅ | ✅ |
-| Multiple AI profiles, module activation, version history | ✅ | ✅ |
-| Bazar (starter files) | ✅ | ✅ |
-| Text search across all your files | ✅ | ⛔ Not for now |
-| Semantic search inside the open file (on-device model) | ⛔ Browser can't carry the model | ✅ |
-| Works with no network | ⛔ | ✅ |
-| Export to a folder you choose | ⛔ Downloads a ZIP instead | ✅ |
+| | **CLM WebApp** | **App CLM (Android)** | **App CLM (Windows, Linux)** |
+|---|---|---|---|
+| How to get it | Open [illaira.com/webapp](https://illaira.com/webapp) | Sideload the APK from [illaira.com/download](https://illaira.com/download) | Installer / portable zip (Windows), `.deb` / AppImage (Linux), same page |
+| Install | Nothing | Manual (see below) | Installer or unzip-and-run (see below) |
+| Where your files live | A folder you pick, if the browser allows it (Chrome, Edge, Brave, Opera, Vivaldi); otherwise the browser's own storage on this device | A folder you pick, outside the app | A folder you pick |
+| Editor, **Sphere Grid**, profiles, modules, Bazar | ✅ | ✅ | ✅ |
+| Three modes — Simplified, Intermediate, Advanced | ✅ | ✅ | ✅ |
+| Search by meaning | ✅ model downloaded into the browser | ✅ model on the phone | ✅ model on the computer |
+| Chat with your AI inside the client | ✅ with your own key, or a model you run on your computer (Ollama, LM Studio) | ✅ with a model on the phone, or your own key | ✅ with a model on the computer, or your own key |
+| A language model that runs on the device itself | ⛔ A browser can't carry one | ✅ | ✅ |
+| **MemoKen** | Browser extension — capture only, no DROP | ✅ Floating tile, MEMO and DROP | ✅ |
+| Export | Downloads a ZIP | Export to a folder you choose | Your files are already plain `.md` in the folder you picked |
 
-Both clients use the same IllAIra account and the same Bazar catalogue.
-The account carries your **entitlements and catalogue items — not your memory.**
+Same IllAIra account and same Bazar catalogue everywhere.
+The account carries your **entitlements and catalogue items — not your memory.** An account is optional for
+the clients themselves; you need it for the Bazar. (There is also an optional, opt-in, per-profile cloud copy —
+what it stores and what it doesn't is written out on the [Privacy page](https://illaira.com/privacy).)
+
+### What the clients do now
+
+A selection of what was added since the first public beta; the dated list is in
+[CHANGELOG.md](./CHANGELOG.md) and the full one at [illaira.com/news](https://illaira.com/news).
+
+* **Chat with your AI, with your profile in front of it.** Two modes: plain Chat, and *On my files*, where
+  the answer is built from the passages of your files that match the question and says which files it read.
+  A conversation is a `.md` file on your device — **it is not memory**; what is worth keeping you save
+  yourself, with the MemoKen, and you confirm it. You can read the exact system prompt the model receives,
+  layer by layer. *Deep thinking* and *Effort* controls, a context meter before you send, and an optional
+  **web search** you switch on yourself (you choose the search engine; there is no default and nobody in the middle).
+* **Projects** — one place for one job (a thesis, a trip, a client): its own instructions, sources (`.md`, `.txt`, PDF) and chats.
+* **Specialists** — the same AI with only some of its modules switched on, composed on the Sphere Grid.
+  On disk it is a small file of references, not a copy.
+* **Three modes: Simplified, Intermediate, Advanced**, a guided path of tutorials for each, and an in-app
+  **Help** that answers from the manual carried inside the app.
+* **The energy sphere** — the guide that welcomes you and walks you through the tutorials — in six colours,
+  plus eight looks for the whole app.
+* **Memory precision** (by name · by similarity), a **knowledge map — «Understanding»** — of the people, places and
+  dates you mention and how they link, and a MemoKen that warns you when you are about to file the same fact twice.
+* **Models you choose, with an honest verdict for this device** — on the phone and on the computer: recommended,
+  compatible or not recommended — and a **model comparison radar** built from published benchmarks, with the source
+  next to every number.
+* **Deferred Neural Tracing is free** in the Bazar and now plugs into the Sphere Grid with a *Paste Trace* button.
+* **Agents** (Advanced mode): prepares an agent harness for the AI you choose — install, configure, key, start.
+  Your key never goes into a configuration file.
+* **Profiles** can be renamed and deleted from the profile list.
 
 ### Android beta — the honest install notes
 
-* **Beta `0.1.69`**, ~183 MB, `arm64-v8a` + `x86_64`, **Android 7.0 or later**. It will not install on 32-bit devices.
+* **Beta `0.1.144`**, ~304 MB, **Android 7.0 or later**. The package carries code for 64-bit and 32-bit phones; nobody has tried it on a 32-bit device.
 * **Sideload only.** The APK is signed with an IllAIra Labs developer key and does not come from the Play Store, so **Android will warn you before installing.** That warning is about where the file comes from, and we can't make it go away from our side.
 * The published manifest — version, SHA-256, size — is at [`illaira.com/app/latest.json`](https://illaira.com/app/latest.json), so you can check the file you downloaded against what we say we published.
 * It is a **beta**. Found something? [illaira.com/contatti](https://illaira.com/contatti).
+
+### Windows and Linux beta — the honest install notes
+
+* **Beta `0.2.4`.** Windows 10/11 64-bit and Linux x86_64. Download page: [illaira.com/download](https://illaira.com/download#desktop).
+* **Windows:** installer (~150 MB) or portable zip (~212 MB). The installer asks for administrator rights and installs for all users in Program Files; the zip installs nothing. **The installer is not signed yet, so Windows will show «Windows protected your PC»** — «More info», then «Run anyway». It needs the Microsoft Visual C++ Runtime; if it is missing, the installer downloads it from Microsoft.
+* **Linux:** a `.deb` for Debian, Ubuntu and derivatives (`sudo apt install ./illaira-clm_0.2.4_amd64.deb`, ~131 MB), or an AppImage for any other distribution (`chmod +x`, then run, ~172 MB). On Ubuntu 22.04 and later the AppImage needs `libfuse2`.
+* The download is the App alone: roughly 567 MB installed on Windows and 460 MB on Linux, **plus the AI models, which you download from inside the App only if you want them.**
+* **What has and has not been verified, as the download page says it:** the automated tests; on Linux, the on-computer model, search by meaning and chat with your files (a PDF included) run for real; on Windows, the installation in Program Files and the update from the previous version were checked **under Wine on Linux, not yet on a real Windows PC.**
+* **No automatic updates.** The App tells you when a new version exists (at most once a day, and you can turn that off) and sends you to the download page.
+* SHA-256 fingerprints for all four files are on the download page and in a `SHA256SUMS` file next to them.
 
 ### What does not exist yet
 
 We would rather you read this here than find out later:
 
-* **No iOS build. No Windows or Linux build.** Android and the browser are what ships today.
-* **Not on Google Play, not on the App Store.**
-* **No cloud sync of your files, and none is running quietly either.** Your `.md` files do not live on our servers. If you want them synced, put the folder in a cloud you already use — that stays your decision, not ours.
+* **No iOS build, and no native Mac build.** On iPhone, iPad and Mac the way is the WebApp, in the browser.
+* **Not on Google Play, not on the App Store, not in the Microsoft Store.**
+* **The Windows installer is unsigned** and the Windows build has not yet been tried on a real Windows PC (see above).
+* **No automatic updates** on the computer clients: you download the new file yourself.
+* **Your `.md` files stay on your device by default.** The cloud copy is optional, per profile, and off until you switch it on — see the [Privacy page](https://illaira.com/privacy) for exactly what it does.
 * **No checkout, no prices, nothing to buy on the site.** Bazar tiers 3–5 are described but not released.
 * This repository holds the **specification**. The application source and the advanced module library are not open source (see [LICENSE.md](./LICENSE.md)).
 
 ---
 
-## Try it — the two short paths
+## Try it — the short paths
 
-**On a desktop browser (fastest):**
+**In a browser (fastest):**
 
 1. Open the [CLM WebApp](https://illaira.com/webapp).
 2. Create an account and take the free **Base tier — The Loom** from the [Bazar](https://illaira.com/bazar).
 3. Write your identity and memory files in the editor.
-4. Export, and load the files into ChatGPT / Claude / Gemini at the start of a session.
+4. Export, and load the files into ChatGPT / Claude / Gemini at the start of a session — or talk to your AI right there, with your own key.
 
 **On Android:** same, starting from the [APK](https://illaira.com/download).
 
-**On iPhone:** the WebApp, and only the WebApp. There is no iOS app.
+**On Windows or Linux:** the [installer, `.deb` or AppImage](https://illaira.com/download#desktop).
 
-> ⚠️ IllAIra is **not a chat.** It does not talk to you and it does not host a model.
-> It builds the file you carry to whichever AI you already use. That is the whole design.
+**On iPhone or Mac:** the WebApp, and only the WebApp. There is no iOS app and no native Mac app.
+
+> ⚠️ IllAIra is **not an AI and does not host a model of its own.** It builds the file you carry to
+> whichever AI you already use. The clients now also let you talk to your AI inside them — with a model
+> that runs on your own device, or with your own key — but the point has not moved: the file is yours,
+> and it works in any chat without us.
 
 ### Free, with an account
 
@@ -123,11 +171,11 @@ We would rather you read this here than find out later:
 | **Module — Deferred Neural Tracing** | Makes your AI declare, at the end of every response, which parts of its memory it used |
 
 Written guides, in five languages:
-[EN](https://illaira.com/guide/illaira-guida-1.3-en.pdf) ·
-[IT](https://illaira.com/guide/illaira-guida-1.3-it.pdf) ·
-[FR](https://illaira.com/guide/illaira-guida-1.3-fr.pdf) ·
-[ES](https://illaira.com/guide/illaira-guida-1.3-es.pdf) ·
-[DE](https://illaira.com/guide/illaira-guida-1.3-de.pdf)
+[EN](https://illaira.com/guide/illaira-guida-1.4-en.pdf) ·
+[IT](https://illaira.com/guide/illaira-guida-1.5-it.pdf) ·
+[FR](https://illaira.com/guide/illaira-guida-1.4-fr.pdf) ·
+[ES](https://illaira.com/guide/illaira-guida-1.4-es.pdf) ·
+[DE](https://illaira.com/guide/illaira-guida-1.4-de.pdf)
 
 The **[Patreon](https://patreon.com/illairalabs)** is where the project is supported and where tutorials and behind-the-scenes work are published. It is not a paywall in front of the files above.
 
@@ -229,7 +277,7 @@ Editing is slow: IllAIra is built by one person, alongside a day job and a famil
 |---|---|
 | 🌐 Website | [illaira.com](https://illaira.com) |
 | 🧭 What the CLM is | [illaira.com/clm](https://illaira.com/clm) |
-| 📦 Changelog | [CHANGELOG.md](./CHANGELOG.md) |
+| 📦 Changelog | [CHANGELOG.md](./CHANGELOG.md) · [what's new on the site](https://illaira.com/news) |
 | ⚙️ Technical details | [HOW_IT_WORKS.md](./HOW_IT_WORKS.md) |
 | 🔬 Stress tests | [STRESS_TESTS.md](./STRESS_TESTS.md) |
 | 💡 Philosophy | [PHILOSOPHY.md](./PHILOSOPHY.md) |
