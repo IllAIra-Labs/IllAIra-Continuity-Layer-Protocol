@@ -16,7 +16,7 @@ file ever disagree, **the manifest is right**: it is generated from the binary, 
 |---|---|
 | **CLM WebApp** | [illaira.com/webapp](https://illaira.com/webapp) — browser, no install |
 | **App CLM (Android)** | [illaira.com/download](https://illaira.com/download) — beta `0.1.144`, sideload |
-| **App CLM (Windows, Linux)** | [illaira.com/download](https://illaira.com/download#desktop) — beta `0.2.4`: Windows 10/11 installer or portable zip, Linux `.deb` or AppImage |
+| **App CLM (Windows, Linux)** | [illaira.com/download](https://illaira.com/download#desktop) — beta `0.2.11`: Windows 10/11 installer or portable zip, Linux `.deb` or AppImage |
 | **Bazar** | [illaira.com/bazar](https://illaira.com/bazar) — Base tier, Tier 2 and one module, free with an account |
 | **Written guides** | EN · IT · FR · ES · DE, from [illaira.com](https://illaira.com) |
 

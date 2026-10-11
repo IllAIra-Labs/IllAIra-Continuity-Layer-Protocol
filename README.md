@@ -7,7 +7,7 @@
 [![Site](https://img.shields.io/badge/site-illaira.com-0a3d40)](https://illaira.com)
 [![CLM WebApp](https://img.shields.io/badge/CLM%20WebApp-live-brightgreen)](https://illaira.com/webapp)
 [![Android](https://img.shields.io/badge/Android%20app-beta%200.1.144-orange)](https://illaira.com/download)
-[![Windows and Linux](https://img.shields.io/badge/Windows%20%7C%20Linux%20app-beta%200.2.4-blueviolet)](https://illaira.com/download)
+[![Windows and Linux](https://img.shields.io/badge/Windows%20%7C%20Linux%20app-beta%200.2.11-blueviolet)](https://illaira.com/download)
 [![Patent Pending](https://img.shields.io/badge/Patent-Pending-blue)](https://illaira.com)
 [![Trademark Registered](https://img.shields.io/badge/Trademark-Registered-green)](https://illaira.com)
 [![License: CC BY-NC 4.0](https://img.shields.io/badge/License-CC%20BY--NC%204.0-lightgrey)](./LICENSE.md)
@@ -22,7 +22,7 @@
 > |---|---|---|
 > | **CLM WebApp** | [illaira.com/webapp](https://illaira.com/webapp) | Live. Runs in the browser, nothing to install |
 > | **App CLM (Android)** | [illaira.com/download](https://illaira.com/download) | Public beta `0.1.144`, sideload APK |
-> | **App CLM (Windows and Linux)** | [illaira.com/download](https://illaira.com/download#desktop) | Public beta `0.2.4` — Windows 10/11 installer or portable zip, Linux `.deb` or AppImage |
+> | **App CLM (Windows and Linux)** | [illaira.com/download](https://illaira.com/download#desktop) | Public beta `0.2.11` — Windows 10/11 installer or portable zip, Linux `.deb` or AppImage |
 > | **Bazar** (starter files) | [illaira.com/bazar](https://illaira.com/bazar) | Two Reminder tiers + one module, free with an account |
 > | **This repository** | you are here | Protocol spec, stress tests, philosophy |
 >
@@ -120,11 +120,11 @@ A selection of what was added since the first public beta; the dated list is in
 
 ### Windows and Linux beta — the honest install notes
 
-* **Beta `0.2.4`.** Windows 10/11 64-bit and Linux x86_64. Download page: [illaira.com/download](https://illaira.com/download#desktop).
-* **Windows:** installer (~150 MB) or portable zip (~212 MB). The installer asks for administrator rights and installs for all users in Program Files; the zip installs nothing. **The installer is not signed yet, so Windows will show «Windows protected your PC»** — «More info», then «Run anyway». It needs the Microsoft Visual C++ Runtime; if it is missing, the installer downloads it from Microsoft.
-* **Linux:** a `.deb` for Debian, Ubuntu and derivatives (`sudo apt install ./illaira-clm_0.2.4_amd64.deb`, ~131 MB), or an AppImage for any other distribution (`chmod +x`, then run, ~172 MB). On Ubuntu 22.04 and later the AppImage needs `libfuse2`.
-* The download is the App alone: roughly 567 MB installed on Windows and 460 MB on Linux, **plus the AI models, which you download from inside the App only if you want them.**
-* **What has and has not been verified, as the download page says it:** the automated tests; on Linux, the on-computer model, search by meaning and chat with your files (a PDF included) run for real; on Windows, the installation in Program Files and the update from the previous version were checked **under Wine on Linux, not yet on a real Windows PC.**
+* **Beta `0.2.11`.** Windows 10/11 64-bit and Linux x86_64. Download page: [illaira.com/download](https://illaira.com/download#desktop).
+* **Windows:** installer (~159 MB) or portable zip (~222 MB). The installer asks for administrator rights and installs for all users in Program Files; the zip installs nothing. **The installer is not signed yet, so Windows will show «Windows protected your PC»** — «More info», then «Run anyway». It needs the Microsoft Visual C++ Runtime; if it is missing, the installer downloads it from Microsoft.
+* **Linux:** a `.deb` for Debian, Ubuntu and derivatives (`sudo apt install ./illaira-clm_0.2.11_amd64.deb`, ~137 MB), or an AppImage for any other distribution (`chmod +x`, then run, ~183 MB). On Ubuntu 22.04 and later the AppImage needs `libfuse2`.
+* The download is the App alone: roughly 594 MB installed on Windows and 488 MB on Linux, **plus the AI models, which you download from inside the App only if you want them.**
+* **What has been verified, as the download page says it:** on build 0.2.11, the automated tests and the checks of the build. On Windows and Linux, the interface is checked on real PCs after publication.
 * **No automatic updates.** The App tells you when a new version exists (at most once a day, and you can turn that off) and sends you to the download page.
 * SHA-256 fingerprints for all four files are on the download page and in a `SHA256SUMS` file next to them.
 
